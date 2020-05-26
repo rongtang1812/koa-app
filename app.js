@@ -1,10 +1,16 @@
 
 // 导入koa2
 const Koa = require('koa');
+
 const Router = require('koa-router')
 const home = require('./router/index')
 const user = require('./router/user')
 const router = new Router()
+
+// 处理post 请求
+const bodyParser = require('koa-bodyparser')
+app.use(bodyParser());
+
 // 创建一个Koa对象表示web app本身:
 const app = new Koa();
  
